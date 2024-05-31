@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Information Form</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .logo-container img {
+      height: 100px;
+    }
+
+    .navbar {
+      background-color: black;
+      padding: 15px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      color: white;
+      width: 75vw;
+      margin: 0 auto;
+    }
+
+    .navbar ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      align-items: center;
+    }
+
+    .navbar li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+    }
+
+    .navbar .left {
+      margin-right: auto;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .form-container {
+      max-width: 75vw;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-container input[type="file"] {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .form-container .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .form-container .row label {
+      flex: 3;
+      margin-right: 10px;
+    }
+
+    .form-container .row input {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .form-container .row1 label {
+      flex: 30000; 
+    }
+
+    .form-container .row1 input {
+      flex: 9; 
+      margin-right: 10px;
+    }
+
+
+    .form-container input[type="submit"] {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="unisel_logo.png" alt="Logo">
+  </div>
+  <div class="navbar">
+    <ul>
+      <li class="left"><a href="#">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">International Student</a>
+        <div class="dropdown-content">
+          <a href="#">Password</a>
+          <a href="#">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+   <div class="form-container">
+    <h2>International Student Information Form</h2>
+    <form>
+      <hr>
+      <div class="row">
+        <label>Please attach one certified copy of each document in A4 size:<br>
+               Copy of Passport                                             <br>
+               Copy of academic certificates                                <br>
+               One Passport size photograph white background                <br>
+        </label>
+        <hr>
+        <input type="file" id="document" name="document">
+      </div>
+      <hr>
+      <div class="row">
+        <label>Mode of Study:</label>
+        <input type="checkbox" id="full-time" name="mode-of-study" value="full-time">
+        <label for="full-time">Full Time</label>
+        <input type="checkbox" id="part-time" name="mode-of-study" value="part-time">
+        <label for="part-time">Part Time</label>
+        <label for="intake-session">Intake Session:</label>
+        <input type="text" id="intake-session" name="intake-session">
+      </div>
+
+      <div class="row1">
+        <label for="programme">Programme:</label>
+        <input type="text" id="programme" name="programme">
+      </div>
+      <hr>
+      
+      <div class="section-title">Personal Particulars</div>
+
+      <div class="row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="row">
+        <label for="passport">Passport Number:</label>
+        <input type="text" id="passport" name="passport">
+      </div>
+
+      <div class="row">
+        <label for="address">Postal Address:</label>
+        <input type="text" id="address" name="address">
+      </div>
+
+      <div class="row">
+        <label for="postcode">Post Code:</label>
+        <input type="text" id="postcode" name="postcode">
+
+        <label for="town">Town:</label>
+        <input type="text" id="town" name="town">
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country">
+      </div>
+
+      <div class="row">
+        <label for="telephone">Telephone No.:</label>
+        <input type="text" id="telephone" name="telephone">
+      </div>
+
+      <div class="row">
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" name="dob">
+
+        <label for="pob">Place of Birth:</label>
+        <input type="text" id="pob" name="pob">
+      </div>
+
+      <div class="row">
+        <label for="martial">Martial Status:</label>
+        <input type="text" id="martial" name="martial">
+
+        <label for="race">Race:</label>
+        <input type="text" id="race" name="race">
+      </div>
+
+      <div class="row">
+        <label for="nationality">Nationality:</label>
+        <input type="text" id="nationality" name="nationality">
+
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" name="religion">
+      </div>
+
+      <div class="row">
+        <label>Disability:</label>
+        <div class="checkbox-group">
+          <input type="checkbox" id="disability-yes" name="disability" value="yes">
+          <label for="disability-yes">Yes</label>
+
+          <input type="checkbox" id="disability-no" name="disability" value="no">
+          <label for="disability-no">No</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="disability-specify">IF yes, please specify:</label>
+        <input type="text" id="disability-specify" name="disability-specify">
+      </div>
+
+      <div class="row">
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email">
+      </div>
+      
+      <hr>
+      
+      <div class="section-title">Emergency Contact Information</div>
+
+      <div class="row">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+      </div>
+
+      <div class="row">
+        <label for="passport">Postal Address:</label>
+        <input type="text" id="passport" name="passport">
+      </div>
+
+      <div class="row">
+        <label for="postcode">Post Code:</label>
+        <input type="text" id="postcode" name="postcode">
+
+        <label for="town">Town:</label>
+        <input type="text" id="town" name="town">
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country">
+      </div>
+
+      <div class="row">
+        <label for="passport">Occupation:</label>
+        <input type="text" id="passport" name="passport">
+      </div>
+
+      <div class="row">
+        <label for="passport">Relationship:</label>
+        <input type="text" id="passport" name="passport">
+      </div>
+
+      <div class="row">
+        <label for="passport">Telephone No.:</label>
+        <input type="text" id="passport" name="passport">
+      </div>
+
+      <div class="row">
+        <label for="passport">Mobile Phone No.:</label>
+        <input type="text" id="passport" name="passport">
+      </div>
+
+      <hr>
+      
+      <div class="section-title">Declaration</div>
+
+      
+
+    <input type="submit" value="Submit">
+    
+    </form>
+  </div>
+
+</body>
+</html>
